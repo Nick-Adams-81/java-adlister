@@ -7,12 +7,10 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Title</title>
-</head>
+    <%@include file="partials/bootstrap.jsp"%>
 <body>
 <%@include file="partials/navbar.jsp"%>
-<h1>profile page</h1>
+<h1>profile page!</h1>
 
 <%@include file="partials/scripts.jsp"%>
 </body>

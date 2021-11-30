@@ -7,7 +7,6 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%--<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>--%>
 
 <%
     if(request.getMethod().equalsIgnoreCase("post")) {
@@ -15,17 +14,11 @@
        String password = request.getParameter("password");
        if(username.equals("admin") && password.equals("password")) {
            response.sendRedirect("profile.jsp");
-       } else {
-
        }
     }
-
 %>
 <html>
-<head>
-    <title>Title</title>
     <%@include file="partials/bootstrap.jsp"%>
-</head>
 <body>
 <%@include file="partials/navbar.jsp"%>
 <form action="login.jsp" method="post">
