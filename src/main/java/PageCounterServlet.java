@@ -5,21 +5,18 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+@WebServlet(name="page-counter", urlPatterns = "/counter")
+public class PageCounterServlet extends HttpServlet {
 
-@WebServlet(name="HelloWorldServlet", urlPatterns = "/")
-public class HelloWorldServlet extends HttpServlet {
+    private int count = 0;
 
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws IOException {
 
         res.setContentType("text/html");
-        String searchQuery = req.getParameter("q");
         PrintWriter out = res.getWriter();
 
-        if(searchQuery != null) {
-            out.println("<h1>Hello, " + searchQuery + "! <h1/>");
-        } else {
-            out.println("<h1>Hello, World!</h1>");
-        }
+            count++;
+            out.println("<h1>You have visited this page " + count + " times </h1>");
 
     }
 
