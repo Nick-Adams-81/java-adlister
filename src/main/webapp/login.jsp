@@ -13,10 +13,11 @@
        String username = request.getParameter("username");
        String password = request.getParameter("password");
        if(username.equals("admin") && password.equals("password")) {
-           response.sendRedirect("profile.jsp");
+           response.sendRedirect("/profile.jsp");
        }
     }
 %>
+
 <html>
     <%@include file="partials/bootstrap.jsp"%>
 <body>
@@ -36,9 +37,8 @@
         <input type="text" class="form-control" placeholder="Password" id="password" name="password" aria-label="Text input with radio button">
     </div>
     <br>
-    <button type="submit">Submit</button>
+    <button type="submit" class="btn btn-success">Submit</button>
 </form>
-
 <%@include file="partials/scripts.jsp"%>
 </body>
 </html>
