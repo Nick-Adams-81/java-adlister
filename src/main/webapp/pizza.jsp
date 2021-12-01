@@ -9,36 +9,80 @@
 <html>
 <%@include file="partials/head.jsp" %>
 <body>
+<br>
+<div class="container">
+    <form method="post">
+        <div class="mb-3">
+            <label for="crust" class="form-label">Crust</label>
+            <select class="form-select" aria-label="Default select example" id="crust" name="crust">
+                <option selected>Crust</option>
+                <option value="Thin">Thin</option>
+                <option value="Medium">Medium</option>
+                <option value="Thick">Thick</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="sauce" class="form-label">Sauce</label>
+            <select class="form-select" aria-label="Default select example" id="sauce" name="sauce">
+                <option selected>Sauce</option>
+                <option value="Marinara">Marinara</option>
+                <option value="Ranch">Ranch</option>
+                <option value="None">None</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="size" class="form-label">Size</label>
+            <select class="form-select" aria-label="Default select example" id="size" name="size">
+                <option selected>Size</option>
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="toppings" class="form-label">Toppings</label>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Cheese" id="toppings" name="toppings">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Cheese
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Peperoni" id="toppings" name="toppings">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Peperoni
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Chicken" id="flexCheckDefault" name="toppings">
+                <label class="form-check-label" for="flexCheckDefault">
+                    Chicken
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="Pineapple" id="flexCheckChecked" name="toppings">
+                <label class="form-check-label" for="flexCheckChecked">
+                    Pineapple
+                </label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Delivery address</label>
+            <input type="text" class="form-control" id="address" name="address" placeholder="address">
+        </div>
 
-<form method="post">
-    <div class="mb-3">
-        <label for="crust" class="form-label">Crust</label>
-        <input type="text" class="form-control" id="crust" name="crust" placeholder="crust choice">
-    </div>
-    <div class="mb-3">
-        <label for="sauce" class="form-label">sauce</label>
-        <input type="text" class="form-control" id="sauce" name="sauce" placeholder="sauce choice">
-    </div>
-    <div class="mb-3">
-        <label for="size" class="form-label">Size</label>
-        <input type="text" class="form-control" id="size" name="size" placeholder="size">
-    </div>
-    <div class="mb-3">
-        <label for="toppings" class="form-label">Toppings</label>
-        <input type="text" class="form-control" id="toppings" name="toppings" placeholder="toppings">
-    </div>
-    <div class="mb-3">
-        <label for="address" class="form-label">Delivery address</label>
-        <input type="text" class="form-control" id="address" name="address" placeholder="address">
-    </div>
+        <button type="submit" class="btn btn-success">Submit</button>
 
-    <button type="submit" class="btn btn-success">Submit</button>
+        <h1>Your order</h1>
+        <h3>Crust: ${crust}</h3>
+        <h3>Sauce: ${sauce}</h3>
+        <h3>Size: ${size}</h3>
+        <h3>Toppings: ${toppings}</h3>
+    </form>
 
-    <h1>Your order</h1>
-    <h3>Crust: ${crust}</h3>
-    <h3>Sauce: ${sauce}</h3>
-    <h3>size: ${size}</h3>
-    <h3>Toppings: ${toppings}</h3>
-</form>
+
+
+</div>
+
 </body>
 </html>
