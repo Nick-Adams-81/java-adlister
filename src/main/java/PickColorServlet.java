@@ -13,14 +13,8 @@ public class PickColorServlet extends HttpServlet {
     }
 
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
-
             String color = req.getParameter("color");
             res.sendRedirect("/viewcolor?color=" + color);
-//            req.setAttribute("color", color);
-//            System.out.println(color);
-//            req.getRequestDispatcher("/viewColor.jsp").forward(req, res);
-//            res.sendRedirect("/viewcolor");
-
     }
 
 }
