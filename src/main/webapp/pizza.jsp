@@ -48,7 +48,7 @@
                 </label>
             </div>
             <div class="form-check">
-                <input class="form-check-input" type="checkbox" value="Peperoni" id="toppings" name="toppings">
+                <input class="form-check-input" type="checkbox" value="Peperoni" id="toppings2" name="toppings">
                 <label class="form-check-label" for="flexCheckChecked">
                     Peperoni
                 </label>
@@ -78,6 +78,7 @@
         <h3>Sauce: ${sauce}</h3>
         <h3>Size: ${size}</h3>
         <h3>Toppings: ${toppings}</h3>
+
     </form>
 
 
