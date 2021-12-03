@@ -16,7 +16,6 @@ public class GuessServlet extends HttpServlet {
     protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
         String correctNum = "2";
         String guess = req.getParameter("guess");
-        System.out.println(guess);
         if(correctNum.equalsIgnoreCase(guess)) {
             res.sendRedirect("/correct");
         } else {

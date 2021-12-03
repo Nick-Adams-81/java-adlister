@@ -11,4 +11,8 @@ public class IncorrectGuessServlet extends HttpServlet {
     protected void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
         req.getRequestDispatcher("/incorrect.jsp").forward(req, res);
     }
+
+    protected void doPost(HttpServletRequest req, HttpServletResponse res) throws IOException {
+        res.sendRedirect("/guess");
+    }
 }

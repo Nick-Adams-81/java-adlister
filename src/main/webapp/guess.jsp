@@ -14,6 +14,7 @@
         <form method="post">
             <label for="guess" class="form-label">Guess a number from 1 to 3!</label>
             <input type="text" class="form-control" id="guess" name="guess" placeholder="Guess a number">
+            <br>
             <button type="submit" class="btn btn-primary">Submit guess</button>
         </form>
 

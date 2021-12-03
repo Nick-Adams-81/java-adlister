@@ -7,10 +7,12 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
-    <title>Title</title>
-</head>
+<%@include file="partials/head.jsp"%>
 <body>
-<h1>Incorrect guess!!!</h1>
+<h1>You LOSE</h1>
+<form method="post">
+    <button type="button" name="submit" id="submit" class="btn btn-primary">Return to guess a number</button>
+</form>
+
 </body>
 </html>

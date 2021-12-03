@@ -9,6 +9,6 @@
 <html>
 <%@include file="partials/head.jsp"%>
 <body style="background-color: ${color}">
-<h1>Your color is ${color}</h1>
+<h1>Your favorite color is ${color}</h1>
 </body>
 </html>

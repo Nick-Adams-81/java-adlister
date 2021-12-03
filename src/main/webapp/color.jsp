@@ -18,7 +18,6 @@
             <input type="text" class="form-control" id="color" name="color" placeholder="color">
             <br>
             <button type="submit" class="btn btn-primary">Submit</button>
-
         </div>
     </form>
 
