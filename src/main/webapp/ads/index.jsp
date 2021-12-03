@@ -10,13 +10,13 @@
 
 <html>
 <head>
-    <title>Title</title>
+    <title>Fresh Ads</title>
 </head>
 <body>
-<h1>test</h1>
+
 <c:forEach var="ad" items="${ads}">
-        <h1>Title: ${ad.title}</h1>
-        <h2>Description: ${ad.description}</h2>
+        <h1>Title: ${ad.getTitle()}</h1>
+        <h2>Description: ${ad.getDescription()}</h2>
 </c:forEach>
 </body>
 </html>
