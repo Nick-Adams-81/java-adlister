@@ -9,7 +9,7 @@
     <jsp:include page="/WEB-INF/partials/navbar.jsp" />
     <div class="container">
         <h1>Please Log In</h1>
-        <form action="/login" method="POST">
+        <form action="/logins" method="POST">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input id="username" name="username" class="form-control" type="text">
@@ -20,6 +20,8 @@
             </div>
             <input type="submit" class="btn btn-primary btn-block" value="Log In">
         </form>
+
+        <p>Not a registered user? <a href="/registers">Click here</a></p>
     </div>
 </body>
 </html>

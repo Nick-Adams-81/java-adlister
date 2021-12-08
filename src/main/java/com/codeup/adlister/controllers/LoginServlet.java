@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet(name = "controllers.LoginServlet", urlPatterns = "/login")
+@WebServlet(name = "controllers.LoginServlet", urlPatterns = "/logins")
 public class LoginServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         if (request.getSession().getAttribute("user") != null) {
@@ -24,14 +24,14 @@ public class LoginServlet extends HttpServlet {
         // TODO: find a record in your database that matches the submitted password
         // TODO: make sure we find a user with that username
         // TODO: check the submitted password against what you have in your database
-        boolean validAttempt = false;
+        boolean validAttempt = username.equals("admin") && password.equals("password");
 
         if (validAttempt) {
             // TODO: store the logged in user object in the session, instead of just the username
             request.getSession().setAttribute("user", username);
-            response.sendRedirect("/profile");
+            response.sendRedirect("/profiles");
         } else {
-            response.sendRedirect("/login");
+            response.sendRedirect("/logins");
         }
     }
 }
